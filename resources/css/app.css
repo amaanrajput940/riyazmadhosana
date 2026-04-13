@@ -1,0 +1,221 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+.mnt-logo img{
+    width: 180px;
+}
+
+.mnt-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.mnt-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+/* Logo */
+.mnt-logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.mnt-logo span {
+    color: #ff4d6d;
+}
+
+/* Menu */
+.mnt-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.mnt-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Underline Hover Effect */
+.mnt-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    transition: .3s;
+}
+
+.mnt-menu a:hover::after {
+    width: 100%;
+}
+
+/* Right Section */
+.mnt-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.mnt-actions i:hover {
+    color: #ff4d6d;
+}
+
+/* Cart */
+.mnt-cart {
+    position: relative;
+}
+
+.mnt-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #ff4d6d;
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* Toggle Button (Hidden on Desktop) */
+.mnt-toggle {
+    display: none;
+    font-size: 20px;
+}
+
+/* Dropdown */
+.mnt-dropdown {
+    position: relative;
+}
+
+.mnt-dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mnt-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    padding: 15px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: none;
+    border-radius: 6px;
+    z-index: 1111111;
+}
+
+.mnt-dropdown:hover .mnt-submenu {
+    display: block;
+}
+
+.mnt-sub-item {
+    position: relative;
+}
+
+.mnt-sub-item > a {
+    display: block;
+    padding: 8px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.mnt-sub-item > a:hover {
+    background: #f8f8f8;
+    color: black;
+}
+
+/* Child Menu */
+.mnt-child-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    min-width: 200px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-radius: 6px;
+}
+
+.mnt-sub-item:hover .mnt-child-menu {
+    display: block;
+}
+
+.mnt-child-menu a {
+    display: block;
+    padding: 8px 20px;
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+}
+
+.mnt-child-menu a:hover {
+    background: #f1f1f1;
+    color: #ff4d6d;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .mnt-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .mnt-menu.active {
+        display: flex;
+    }
+
+    .mnt-toggle {
+        display: block;
+    }
+
+    .mnt-menu a::after {
+        display: none;
+    }
+
+    .mnt-logo img {
+        width: 126px;
+    }
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: #fbfbfb;
+    /* border-color: #0d6cf5; */
+    box-shadow: inset(0px 2px 2px #0d6cf5);
+    box-shadow: none;
+    border-width: 2px;
+}
+
