@@ -25,8 +25,12 @@
 
 .sheir {
     text-align: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
         position: relative;
+}
+
+.sheir .line:first-child{
+    margin-bottom: 0;
 }
 
 .sheir .actions{
@@ -38,8 +42,9 @@
 
 .line {
     font-family: 'Noto Nastaliq Urdu', serif;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 2.2;
+    margin-bottom: 15px;
 }
 
 @media(max-width:768px){
