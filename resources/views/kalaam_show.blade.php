@@ -72,7 +72,7 @@
 
     border-radius: 36px;
     padding: 15px 0;
-
+font-weight: bold;
     z-index: 999;
 }
 .sheir {
