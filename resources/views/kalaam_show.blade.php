@@ -105,7 +105,7 @@
             @endforeach
 
             <div class="actions">
-                Copy
+                <i data-feather="copy"></i>
                 </div>
         </div>
     @endforeach

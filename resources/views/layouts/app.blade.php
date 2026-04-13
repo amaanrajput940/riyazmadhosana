@@ -40,12 +40,15 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/feather-icons"></script>
 <script>
 function toggleMenu() {
     document.getElementById("mntMenu").classList.toggle("active");
 }
 </script>
-
+   <script>
+      feather.replace();
+    </script>
 @stack('scripts')
 
 
