@@ -112,7 +112,7 @@ display: block;
 }
 
 .kalaam-item.active {
-    background: #e9ecff;
+    background: #d7d4cf;
     font-weight: bold;
 }
 
