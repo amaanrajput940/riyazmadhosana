@@ -26,6 +26,14 @@
 .sheir {
     text-align: center;
     margin-bottom: 20px;
+        position: relative;
+}
+
+.sheir .actions{
+        position: absolute;
+    left: right;
+    left: 15px;
+    top: 38%;
 }
 
 .line {
@@ -95,6 +103,10 @@
             @foreach($lines as $line)
                 <div class="line">{{ $line }}</div>
             @endforeach
+
+            <div class="actions">
+                Copy
+                </div>
         </div>
     @endforeach
 
