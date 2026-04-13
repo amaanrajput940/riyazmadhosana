@@ -16,6 +16,7 @@ class HomeController extends Controller
             ->orderBy('sort_no', 'asc')
             ->get();
 
+
            $kalaams =  $kalaam;
 
         $current = null;
