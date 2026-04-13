@@ -14,6 +14,7 @@ class HomeController extends Controller
     {
         $kalaam = DB::table('kalaam')->where('is_active', true)
             ->orderBy('sort_no', 'asc')
+
             ->get();
 
 
