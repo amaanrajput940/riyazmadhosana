@@ -110,7 +110,7 @@
             @endforeach
 
             <div class="actions">
-                <i data-feather="copy"></i>
+                <i data-feather="copy"  onclick="copySheir(this)"></i>
                 </div>
         </div>
     @endforeach

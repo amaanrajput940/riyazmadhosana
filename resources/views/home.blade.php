@@ -192,6 +192,10 @@ iframe {
 @endsection
 
 @push('scripts')
+
+
+
+
 <script>
     var rootUrl = "{{ config('app.app_root_url') }}";
 document.addEventListener('DOMContentLoaded', function () {

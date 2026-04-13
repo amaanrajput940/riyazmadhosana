@@ -51,6 +51,33 @@ function toggleMenu() {
     </script>
 @stack('scripts')
 
+<script>
+function copySheir(el) {
 
+    // sheir text collect karo
+    let sheirDiv = el.closest('.sheir');
+    let text = '';
+
+    sheirDiv.querySelectorAll('.line').forEach(function(line) {
+        text += line.innerText + "\n";
+    });
+
+    // clipboard me copy
+    navigator.clipboard.writeText(text.trim()).then(function () {
+
+        // optional: UI feedback
+        el.innerHTML = '<i data-feather="check"></i>';
+        feather.replace();
+
+        setTimeout(() => {
+            el.innerHTML = '<i data-feather="copy"></i>';
+            feather.replace();
+        }, 1500);
+
+    }).catch(function (err) {
+        console.log('Copy failed', err);
+    });
+}
+</script>
 </body>
 </html>
