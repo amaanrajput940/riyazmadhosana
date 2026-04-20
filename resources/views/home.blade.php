@@ -54,7 +54,7 @@
     color: #fff;
     padding: 15px;
     border-radius: 20px;
-    border: 5px solid #625c53;
+    border: 4px solid #625c53;
 }
 
 /* Kalaam Item */
