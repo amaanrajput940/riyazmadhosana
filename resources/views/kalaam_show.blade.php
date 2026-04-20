@@ -63,7 +63,7 @@ body {
 .actions {
     position: absolute;
     left: 10px;
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%);
     cursor: pointer;
     opacity: 0.7;
