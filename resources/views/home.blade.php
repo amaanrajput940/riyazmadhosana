@@ -6,160 +6,139 @@
 .app {
     display: flex;
     height: 100vh;
+    background: #0f0f0f;
 }
-   .kalaam-heading {
+
+/* Heading */
+.kalaam-heading {
     text-align: center;
     font-family: 'Noto Nastaliq Urdu', serif;
     font-size: 22px;
-    color: #2c2c2c;
+    color: #f1f1f1;
     margin-bottom: 15px;
     line-height: 2;
 }
 
-/* Author muted style */
+/* Author */
 .kalaam-heading .author {
-display: block;
-    font-size: 14px;
-    color: inherit;
+    display: block;
+    font-size: 13px;
     margin-top: 5px;
     font-family: sans-serif;
-    letter-spacing: 0.3px;
-    opacity: 0.70;
+    opacity: 0.6;
 }
+
 /* Sidebar */
 .sidebar {
     width: 320px;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #222;
     overflow-y: auto;
     padding: 15px;
-    background: #fff;
+    background: #121212;
 }
-@media(max-width:768px){
 
+/* Scrollbar (nice touch 😎) */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
 
-.sidebar {
-    width: 100%;
-    border-right: 1px solid #eee;
-    overflow-y: auto;
+/* Sidebar heading */
+.sidebar h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    background: linear-gradient(320deg, #181614, #1e1b17);
+    color: #fff;
     padding: 15px;
-    background: #fff;
-    height: 100vh;
-}
-    .sidebar h4 {
-        font-size: 20px;
-        margin-bottom: 15px;
-        background-color: #625c53;
-        color: #ffffff;
-        padding: 15px;
-        border-radius: 24px;
-
-    }
-
-    .kalaam-item {
-        background: #efefef;
-        border-right:5px solid #625c53
-    }
-    .kalaam-item:nth-child(odd) {
-    border-right: 5px solid #625c53;
-    border-left: none;
+    border-radius: 20px;
+    border: 5px solid #625c53;
 }
 
-/* Even items → left border */
-.kalaam-item:nth-child(even) {
-    border-left: 5px solid #625c53;
-    border-right: none;
-}
-
-    .kalaam-item:active {
-        transform: scale(0.98);
-        background: #eef1ff;
-    }
-}
-
-    .sidebar h4 {
-        font-size: 20px;
-        margin-bottom: 15px;
-        background-color: #625c53;
-        color: #ffffff;
-        padding: 15px;
-        border-radius: 24px;
-
-    }
-
+/* Kalaam Item */
 .kalaam-item {
-    background: #efefef;
+    background: #1c1c1c;
     padding: 12px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
+    color: #e5e5e5;
     transition: all 0.25s ease;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
 }
 
 /* Hover */
 .kalaam-item:hover {
-    background: #f3f5ff;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    background: #262626;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
-/* Odd → right border */
-.kalaam-item:nth-child(odd):hover {
-    border-right: 5px solid #625c53;
-}
-
-/* Even → left border */
-.kalaam-item:nth-child(even):hover {
-    border-left: 5px solid #625c53;
-}
-
+/* Active */
 .kalaam-item.active {
-    background: #d7d4cf;
+    background: linear-gradient(135deg, #625c53, #3e3a35);
+    color: #fff;
     font-weight: bold;
+}
+
+/* Odd/Even borders (subtle) */
+.kalaam-item:nth-child(odd):hover {
+    border-right: 3px solid #625c53;
+}
+.kalaam-item:nth-child(even):hover {
+    border-left: 3px solid #625c53;
 }
 
 /* Content */
 .content {
     flex: 1;
     padding: 20px;
-    background: #f7f8fc;
+    background: #0f0f0f;
 }
 
+/* Iframe */
 iframe {
     width: 100%;
     height: 85vh;
     border: none;
     border-radius: 12px;
-    background: #fff;
+    background: #1c1c1c;
 }
 
-/* Mobile */
+/* 📱 Mobile */
 @media(max-width:768px){
-    .app {
-        flex-direction: column;
-    }
 
-    .content {
-        display: none;
-    }
-    .kalaam-heading {
-    text-align: center;
-    font-family: 'Noto Nastaliq Urdu', serif;
+.app {
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    display: none;
+}
+
+.kalaam-heading {
     font-size: 22px;
-    color: #2c2c2c;
-    margin-bottom: 10px;
-    line-height: 2;
     font-weight: 800;
 }
 
-/* Author muted style */
-.kalaam-heading .author {
-    display: block;
-    font-size: 14px;
-    color: inherit;
-    margin-top: 0px;
-    font-family: sans-serif;
-    letter-spacing: 0.3px;
-    opacity: 0.70;
+.kalaam-item {
+    background: #1c1c1c;
 }
+
+/* Alternating borders */
+.kalaam-item:nth-child(odd) {
+    border-right: 4px solid #625c53;
+}
+.kalaam-item:nth-child(even) {
+    border-left: 4px solid #625c53;
+}
+
 }
 </style>
 
